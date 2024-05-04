@@ -1,4 +1,6 @@
-streamlit
-ollama
+beautifulsoup4
+chromadb
 langchain
 langchain_community
+ollama
+streamlit
