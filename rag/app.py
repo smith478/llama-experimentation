@@ -21,7 +21,7 @@ if webpage_url:
 
     def ollama_llm(question, context):
         formatted_prompt = f"Question: {question}\n\nContext: {context}"
-        response = ollama.chat(model="llama3", message=[{'role': 'user', 'content': formatted_prompt}])
+        response = ollama.chat(model="llama3", messages=[{'role': 'user', 'content': formatted_prompt}])
         return response['message']['content']
     
     retriever = vectorstore.as_retriever()
@@ -39,5 +39,5 @@ if webpage_url:
     prompt = st.text_input("Ask any question about the webpage")
 
     if prompt:
-        result = rag_chain(prompt, webpage_url)
+        result = rag_chain(prompt)
         st.write(result)
