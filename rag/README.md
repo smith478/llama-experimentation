@@ -18,3 +18,11 @@ pip install -r requirements.txt
 ```
 
 ### Docker
+
+## Streamlit application
+
+Witht the Python environment set up as above, the streamlit application can be run from this directory using
+
+```bash
+streamlit run app.py
+```
